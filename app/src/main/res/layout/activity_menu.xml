@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".MainActivity">
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondoActivity"
+    android:layout_marginBottom="40dp">
+
+    <TextView
+        android:id="@+id/tituloMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TEMATICAS"
+        android:textColor="@color/black"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/cat_Animales"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnBacktoIncio"
+        app:layout_constraintVertical_bias="1" />
+
+    <android.widget.Button
+        android:id="@+id/btnBacktoIncio"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/btn_retroceso"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cat_Animales"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tituloMenu"
+        android:orientation="vertical"
+        android:background="@color/fondomenus"
+        android:layout_marginTop="10dp"
+        android:onClick="goAhorcado">
+        <TextView
+            android:id="@+id/tituloCatAnimales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="ANIMALES"
+            android:padding="10dp"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_animales"
+            android:padding="10dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cat_Colores"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cat_Animales"
+        android:orientation="vertical"
+        android:background="@color/fondomenus"
+        android:layout_marginTop="20dp"
+        android:onClick="goAhorcado">
+        <TextView
+            android:id="@+id/tituloCatColores"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="COLORES"
+            android:padding="10dp"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_colores"
+            android:padding="10dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/cat_Frutas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cat_Colores"
+        android:orientation="vertical"
+        android:background="@color/fondomenus"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:onClick="goAhorcado">
+        <TextView
+            android:id="@+id/tituloCatFrutas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:text="FRUTAS"
+            android:padding="10dp"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/img_frutas"
+            android:padding="10dp"
+            android:layout_marginBottom="20dp"/>
+
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
